@@ -19,6 +19,6 @@ while(num>0)
     num=num/10;
 }  
 System.out.println("number of even number"+ec);
-System.out.println("number of odd number "+oc);
+System.out.println("number of odd_number "+oc);
  }   
 }
