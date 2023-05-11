@@ -1,18 +1,18 @@
-//count number of digits.
+//print a table for given number.
 
 import java.util.Scanner;
-class Program{
-    public static void main(String[] args) {
-        Scanner sc  = new Scanner(System.in);
-        
-        System.out.print("Enter the number: ");
-        int number = sc.nextInt();
-        int count =0;
 
-    while(number > 0){
-        number =  number/10;
-        count++;
-    }
-    System.out.println(count+" digits are there in the number");
+class Program {
+    public static void main(String[] args) {
+     Scanner sc = new  Scanner(System.in);
+
+     System.out.print("Enter the number of WHAT tabel you want to print: ");
+
+     int number  = sc.nextInt();
+
+     for(int i = 1; i <= 10; i++){
+        System.out.println(number+" * "+i+" = "+number*i);
+     }
+        
     }
 }
