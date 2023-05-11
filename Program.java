@@ -1,22 +1,21 @@
+//calculate power of number
+
 import java.util.Scanner;
 
 class Program{
     public static void main(String[] args) {
-        System.out.println("Enter the choice: ");
-        Scanner sc = new Scanner(System.in);
-        int choice = sc.nextInt();
+        System.out.print("Enter the number: ");
+        Scanner scanner = new Scanner(System.in);
 
-        switch(choice){
-            case 1: System.out.println("You've choosen 1st opt.");
-            break;
-            case 2: System.out.println("You've choosen 2nd opt.");
-            break;
-            case 3: System.out.println("You've choosen 3rd opt.");
-            break;
-            case 4: System.out.println("You've choosen 4th opt.");
-            break;
-            default: System.out.println("invalid choice...!");
-            break;
+        int number = scanner.nextInt();
+        System.out.print("Enter the number: ");
+        int power = scanner.nextInt();
+
+        int res = 1;
+        for (int i = 1; i <= power ; i++) {
+               res = res * number;
         }
+
+        System.out.println("The power of "+number+" is: "+res);
     }
 }
