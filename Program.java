@@ -1,17 +1,20 @@
-//greatest number among 3 numbers.
+//factorial of number
 
 import java.util.Scanner;
 class Program{
     public static void main(String[] args) {
         Scanner sc  = new Scanner(System.in);
         
-        System.out.print("Enter the 3 numbes: ");
-        int a = sc.nextInt();
-        int b = sc.nextInt();
-        int c = sc.nextInt();
+        System.out.print("Enter the number: ");
+        int number = sc.nextInt();
 
-        int max = (a > b) ? (a > c ? a : c) :(b>c ? b: c);
+        int res = 1;
 
-        System.out.println(" "+a+" "+b+" "+c+" Among these 3 numbers:"+max+" is maximum number");
+        for(int i = number ; i>= 1; i--){
+            res = res * i;
+        }
+
+        System.out.println(res+" is factorial of "+number);
+
     }
 }
