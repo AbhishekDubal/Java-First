@@ -1,4 +1,4 @@
-//factorial of number
+//count number of digits.
 
 import java.util.Scanner;
 class Program{
@@ -7,14 +7,12 @@ class Program{
         
         System.out.print("Enter the number: ");
         int number = sc.nextInt();
+        int count =0;
 
-        int res = 1;
-
-        for(int i = number ; i>= 1; i--){
-            res = res * i;
-        }
-
-        System.out.println(res+" is factorial of "+number);
-
+    while(number > 0){
+        number =  number/10;
+        count++;
+    }
+    System.out.println(count+" digits are there in the number");
     }
 }
