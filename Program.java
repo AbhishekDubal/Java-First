@@ -4,13 +4,13 @@ class Program
     public static void main(String args[])
     {
        //Looping Statements (If you want to repeat certain line of code repeatedly)
-       //#4 Nested for-loop
+       //#5 for-each loop(Mostly used Arrays cases.
+       // It'll help you to take the array elements one by one from one set of array and give it to other variable one by one).
       
-       for(int i = 1; i<=10; i++){
-            for(int j = 1; j<=10; j++){
-                System.out.print("*");
-            }
-            System.out.println();
-       }
+       int a[] = {10,12,14,145};
+       
+      for(int b:a){
+        System.out.print(b+" ");
+      }
     }
 }
