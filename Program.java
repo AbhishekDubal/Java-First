@@ -2,15 +2,15 @@ class Program
 {
     public static void main(String args[])
     {
-       //Assignment Operator(=, +=,-=,*=,/=,%=)#It is unary operator. Because, it will work on single operand itself.
-       int x;
+       //Ternary Operator(? :)#it works like if else conditions
+       int x=10, y=20;
+       int maximum = (x>y)? x:y;
+       System.out.println(maximum);
 
-       x=10;//simple(=)
+       int num1 = 5, num2 =2, num3 = 4;
+    
+       int minimumNumber =  (num1<num2) ? (num1< num3 ? num1: num3) : (num2< num3 ? num2 : num3);
 
-       x+=5;//compound
-       System.out.println(x);
-
-       x-=2;
-       System.out.println(x);
+       System.out.println(minimumNumber);
     }
 }
