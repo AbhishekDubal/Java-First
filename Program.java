@@ -11,6 +11,10 @@ class Program
        {
         System.out.println("Yes! you can Vote...!");
        }
+       else if(age<0)
+       {
+        System.out.println("Oops! You got to born first.!");
+       }
        else
        {
         System.out.println("Sorry! Only 18 or more than that age group of people can Vote!");
