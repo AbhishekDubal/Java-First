@@ -2,10 +2,15 @@ class Program
 {
     public static void main(String args[])
     {
-        int a=10, b=22;
-        System.out.println(a++);    //Post Increment
-        System.out.println(++a);    //Pre Increment
-        System.out.println(a--);     //Post Decrement
-        System.out.println(--a);    //Pre Increment
+       //Assignment Operator(=, +=,-=,*=,/=,%=)#It is unary operator. Because, it will work on single operand itself.
+       int x;
+
+       x=10;//simple(=)
+
+       x+=5;//compound
+       System.out.println(x);
+
+       x-=2;
+       System.out.println(x);
     }
 }
