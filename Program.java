@@ -5,19 +5,30 @@ class Program
     {
        //Decision Making Statements:(Conditional Statements)
        Scanner sc =new Scanner(System.in);
-       System.out.print("ENter your age: ");
-        int age =sc.nextInt();
-       if(age>=18)
+       System.out.print("ENter you a: ");
+        int a =sc.nextInt();
+        System.out.print("ENter you b: ");
+        int b =sc.nextInt();
+        System.out.print("ENter you c: ");
+        int c =sc.nextInt();
+       if(a>b)
        {
-        System.out.println("Yes! you can Vote...!");
+        if(a>c)
+        {
+            System.out.println(a+" is biggest number");
+        }
+        else
+        {
+            System.out.println(c+" is biggest number");
+        }
        }
-       else if(age<0)
+       else if(b>c)
        {
-        System.out.println("Oops! You got to born first.!");
+        System.out.println(b+" is biggest number");
        }
        else
        {
-        System.out.println("Sorry! Only 18 or more than that age group of people can Vote!");
+        System.out.println(c+" is biggest number");
        }
     }
 }
