@@ -5,30 +5,26 @@ class Program
     {
        //Decision Making Statements:(Conditional Statements)
        Scanner sc =new Scanner(System.in);
-       System.out.print("ENter you a: ");
-        int a =sc.nextInt();
-        System.out.print("ENter you b: ");
-        int b =sc.nextInt();
-        System.out.print("ENter you c: ");
-        int c =sc.nextInt();
-       if(a>b)
-       {
-        if(a>c)
+       System.out.print("ENter your choice: ");
+        char choice =sc.next().charAt(0);
+       
+        int a= 10, b=20;
+        switch(choice)
         {
-            System.out.println(a+" is biggest number");
+            case '+' : System.out.println("Addition of a and b is = "+(a+b));
+            break;
+
+            case '-' : System.out.println("Subtraction of a and b is = "+(a-b));
+            break;
+
+            case  '*': System.out.println("Multiple of a and b is = "+(a*b));
+            break;
+
+            case  '/': System.out.println("Divison of a and b is = "+(a/b));
+            break;
+
+            default : System.out.println("Please choose valid operator");
         }
-        else
-        {
-            System.out.println(c+" is biggest number");
-        }
-       }
-       else if(b>c)
-       {
-        System.out.println(b+" is biggest number");
-       }
-       else
-       {
-        System.out.println(c+" is biggest number");
-       }
+        
     }
 }
