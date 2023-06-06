@@ -3,15 +3,17 @@ class Program
 {
     public static void main(String args[])
     {
-      //calculate the factorial of given Number:
-      Scanner sc= new Scanner(System.in); 
+      //calculate the Number of digits in given Number:
+      
+      Scanner sc= new Scanner(System.in);
       System.out.print("Enter the Number: ");
       int Number = sc.nextInt();
 
-      int result = 1;
-      for (int i = Number; i >= 1; i--) {
-        result = i*result;
+      int count = 0;
+      while(Number>0){
+        Number = Number/10;
+        count++;
       }
-      System.out.print("The factorial of "+Number+" is "+result);
+      System.out.println("The Number "+Number+" is having "+count+" of digits!");
     }
 }
