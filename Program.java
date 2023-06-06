@@ -3,19 +3,23 @@ class Program
 {
     public static void main(String args[])
     {
-      //Area of Tri-Angle:
+      //Swap Two Numbers:
       
-      Scanner sc = new Scanner(System.in);
-      System.out.print("Enter the each sides: ");
+      int person1 = 10;
+      int person2 = 20;
+
+      int otherPerson;
+
+      System.out.println("Person1 is having the money of "+person1);
+      System.out.println("Person2 is having the money of "+person2);
+
       
-      int a =sc.nextInt();
-      int b =sc.nextInt();
-      int c =sc.nextInt();
-
-      double sp = (a+b+c)/2;
-
-      double Area = Math.sqrt(sp*(sp-a)*(sp-b)*(sp-c));
-
-      System.out.println("The Area of Tra-angle is: "+Area);
+      System.out.println("After the exchange or Swaping: ");
+      otherPerson = person1;
+      person1 = person2;
+      person2 = otherPerson;
+      
+      System.out.println("Person1 is having the money of "+person1);
+      System.out.println("Person2 is having the money of "+person2);
     }
 }
