@@ -3,22 +3,19 @@ class Program
 {
     public static void main(String args[])
     {
-      //character to UpperCase and LowerCase:
-
+      //Leap year or non-leap year:
       Scanner sc = new Scanner(System.in);
-      System.out.print("Enter the character: ");
+      System.out.println("Enter the year: ");
+      int year = sc.nextInt();
 
-      char character1 = sc.next().charAt(0);
-
-      char character2;
-      
-      if(character1 >='A' && character1 <='Z'){
-        character2 = Character.toLowerCase(character1);
-        System.out.println(character2);
-      }else{
-        character2 = Character.toUpperCase(character1);
-        System.out.println(character2);
+      if(year %400==0 && year %100==0){
+        System.out.println("Leap year");
       }
-    
+      else if(year%100!=0 && year %4==0){
+        System.out.println("Leap year");
+      }
+      else{
+        System.out.println("Non-leap year");
+      }
     }
 }
