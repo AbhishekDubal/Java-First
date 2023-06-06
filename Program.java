@@ -3,16 +3,16 @@ class Program
 {
     public static void main(String args[])
     {
-      //Find the factors of given Number:
+      //Reverse the given Number:
       Scanner sc = new Scanner(System.in);
       System.out.println("Enter the Number: ");
 
       int Number = sc.nextInt();
 
-      for(int i=1; i<=Number;i++){
-        if(Number%i==0){
-          System.out.print(i+" ");
-        }
+      while(Number>0){
+        int rem = Number%10;
+        System.out.print(rem);
+        Number=Number/10;
       }
     }
 }
