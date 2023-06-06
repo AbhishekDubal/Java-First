@@ -3,14 +3,19 @@ class Program
 {
     public static void main(String args[])
     {
-      //Print Multiplication Table of Given Number:
+      //Area of Tri-Angle:
       
       Scanner sc = new Scanner(System.in);
-      System.out.print("Enter the Number: ");
-      int Number = sc.nextInt();
+      System.out.print("Enter the each sides: ");
+      
+      int a =sc.nextInt();
+      int b =sc.nextInt();
+      int c =sc.nextInt();
 
-      for (int i = 1; i <=10; i++) {
-        System.out.println(Number+"*"+i+"="+Number*i);
-      }
+      double sp = (a+b+c)/2;
+
+      double Area = Math.sqrt(sp*(sp-a)*(sp-b)*(sp-c));
+
+      System.out.println("The Area of Tra-angle is: "+Area);
     }
 }
