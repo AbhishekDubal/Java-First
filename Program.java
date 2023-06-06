@@ -3,18 +3,16 @@ class Program
 {
     public static void main(String args[])
     {
-      //Check whether the number is divisible by 8:
+      //Find the factors of given Number:
       Scanner sc = new Scanner(System.in);
       System.out.println("Enter the Number: ");
 
       int Number = sc.nextInt();
 
-      if(Number%8==0){
-        System.out.println("Number is divisible by 8.");
+      for(int i=1; i<=Number;i++){
+        if(Number%i==0){
+          System.out.print(i+" ");
+        }
       }
-      else{
-        System.out.println("Number is Not divisible by 8.");
-      }
-
     }
 }
