@@ -1,16 +1,12 @@
-import java.util.Scanner;
+
 class Program
 {
     public static void main(String args[])
     {
-      //print ASCII value of given character 
+      //print A to Z character 
 
-      Scanner sc = new Scanner(System.in);
-      System.out.print("Enter the Character: ");
-
-      char character = sc.next().charAt(0);
-
-      int value = character;
-      System.out.print(value);
+      for (char i = 'A'; i <= 'Z'; i++) {
+        System.out.print(i+" ");
+      }
     }
 }
