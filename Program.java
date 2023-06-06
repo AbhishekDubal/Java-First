@@ -3,19 +3,18 @@ class Program
 {
     public static void main(String args[])
     {
-      //Leap year or non-leap year:
+      //Check whether the number is divisible by 8:
       Scanner sc = new Scanner(System.in);
-      System.out.println("Enter the year: ");
-      int year = sc.nextInt();
+      System.out.println("Enter the Number: ");
 
-      if(year %400==0 && year %100==0){
-        System.out.println("Leap year");
-      }
-      else if(year%100!=0 && year %4==0){
-        System.out.println("Leap year");
+      int Number = sc.nextInt();
+
+      if(Number%8==0){
+        System.out.println("Number is divisible by 8.");
       }
       else{
-        System.out.println("Non-leap year");
+        System.out.println("Number is Not divisible by 8.");
       }
+
     }
 }
