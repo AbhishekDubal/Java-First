@@ -1,26 +1,23 @@
 import java.util.Scanner;
 class Program {
   public static void main(String[] args) {
-    //Armstrong Number(like 153):
+    //Prime Number(the number divides with itself and by 1):
 
     Scanner sc =new Scanner(System.in);
     System.out.println("Enter the Number: ");
     int Number = sc.nextInt();
 
-    int temp = Number;
-    int sum =0;
-
-    while(Number>0){
-      int rem = Number%10;
-      sum = sum+rem*rem*rem;
-      Number = Number/10;
+    int count=0;
+    for(int i=1; i<=Number; i++){
+      if(Number%i==0){
+        count++;
+      }
     }
-
-    if(sum == temp){
-      System.out.println("The number "+temp+" is Palindrome!");
+    if(count==2){
+      System.out.println("Yes! "+Number+" is Palindrome.");
     }
     else{
-      System.out.println("The number "+temp+" is Non-Palindrome!");
+      System.out.println("No! "+Number+" is Non-Palindrome.");
     }
   }
 }
