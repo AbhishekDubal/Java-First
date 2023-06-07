@@ -1,23 +1,25 @@
 import java.util.Scanner;
 class Program {
   public static void main(String[] args) {
-    //Perfect Number(the sum of numbers that divides with the Number given ):
+    //Prime Numbers between Two given Numbers:
 
     Scanner sc =new Scanner(System.in);
-    System.out.println("Enter the Number: ");
-    int Number = sc.nextInt();
+    System.out.println("Enter the 1st Number: ");
+    int Number1 = sc.nextInt();
 
-    int sum=0;
-    for(int i=1; i<Number;i++){
-      if(Number%i==0){
-        sum = sum+i;
+    System.out.println("Enter the 2nd Number: ");
+    int Number2 = sc.nextInt();
+
+    for(int i=Number1;i<=Number2; i++){
+      int count=0;
+      for(int j=1;j<=i;j++){
+        if(i%j==0){
+          count++;
+        }
       }
-    }
-    if(sum==Number){
-      System.out.println("The Number "+Number+" is Perfect Number.");
-    }
-    else{
-      System.out.println("The Number "+Number+" is Non-Perfect Number.");
+      if(count==2){
+        System.out.print(i+" ");
+      }
     }
   }
 }
