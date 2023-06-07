@@ -1,23 +1,23 @@
 import java.util.Scanner;
 class Program {
   public static void main(String[] args) {
-    //Prime Number(the number divides with itself and by 1):
+    //Perfect Number(the sum of numbers that divides with the Number given ):
 
     Scanner sc =new Scanner(System.in);
     System.out.println("Enter the Number: ");
     int Number = sc.nextInt();
 
-    int count=0;
-    for(int i=1; i<=Number; i++){
+    int sum=0;
+    for(int i=1; i<Number;i++){
       if(Number%i==0){
-        count++;
+        sum = sum+i;
       }
     }
-    if(count==2){
-      System.out.println("Yes! "+Number+" is Palindrome.");
+    if(sum==Number){
+      System.out.println("The Number "+Number+" is Perfect Number.");
     }
     else{
-      System.out.println("No! "+Number+" is Non-Palindrome.");
+      System.out.println("The Number "+Number+" is Non-Perfect Number.");
     }
   }
 }
