@@ -1,25 +1,23 @@
 import java.util.Scanner;
 class Program {
   public static void main(String[] args) {
-    //Prime Numbers between Two given Numbers:
+    //Arrays:- Array is a object that can store similar kind of elements in contagious memory(sequential manner).
 
-    Scanner sc =new Scanner(System.in);
-    System.out.println("Enter the 1st Number: ");
-    int Number1 = sc.nextInt();
+    //static array: lenth of array elemnts fixed.
+    int a[] = new int[4];
+    a[0]=10;
+    a[1]=108;
+    a[2]=105;
+    a[3]=170;
+    
+    for (int i = 0; i < a.length; i++) {
+      System.out.print(a[i]+" ");
+    }
 
-    System.out.println("Enter the 2nd Number: ");
-    int Number2 = sc.nextInt();
-
-    for(int i=Number1;i<=Number2; i++){
-      int count=0;
-      for(int j=1;j<=i;j++){
-        if(i%j==0){
-          count++;
-        }
-      }
-      if(count==2){
-        System.out.print(i+" ");
-      }
+    //dynamic array: Length will not be fixed.
+    int x[] = {2,3,45,5,35};
+    for (int i = 0; i < x.length; i++) {
+      System.out.print(x[i]+"   ");
     }
   }
 }
