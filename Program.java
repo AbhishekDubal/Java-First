@@ -19,5 +19,21 @@ class Program {
     for (int i = 0; i < x.length; i++) {
       System.out.print(x[i]+"   ");
     }
+
+    //user input dynamic array at output:
+    Scanner sc =new Scanner(System.in);
+    System.out.print("Enter the length of the Array: ");
+    int length =sc.nextInt();
+
+    int array []= new int[length];
+
+    System.out.print("Enter the elements: ");
+    for (int i = 0; i < array.length; i++) {
+       array[i]=sc.nextInt();
+    }
+
+    for (int i = 0; i < array.length; i++) {
+      System.out.print(array[i]+" ");
+    }
   }
 }
