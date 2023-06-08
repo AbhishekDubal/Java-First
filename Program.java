@@ -35,5 +35,10 @@ class Program {
     for (int i = 0; i < array.length; i++) {
       System.out.print(array[i]+" ");
     }
+
+    System.out.println("By suing for each loop: ");
+    for (int i : array) {
+      System.out.print(i+" ");
+    }
   }
 }
