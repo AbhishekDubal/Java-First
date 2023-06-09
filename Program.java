@@ -1,9 +1,8 @@
-import java.util.Arrays;
 import java.util.Scanner;
 class Program {
   public static void main(String[] args) {
   
-    //print array elements in reverse order:
+    //print sum of array elements :
     Scanner sc = new Scanner(System.in);
     System.out.println("Enter the length of array: ");
     int size = sc.nextInt();
@@ -15,17 +14,16 @@ class Program {
        array[i]=sc.nextInt();
     }
 
-    System.out.println("The elements in Proper order: ");
+    System.out.println("The elements that you've entered in order: ");
     for(int i= 0; i<array.length;i++){
       System.out.print(array[i]+" ");
     }
 
-    // System.out.println();
-    System.out.println("\nThe elements in Reverse order: ");
-
+    int sum =0;
     for (int i = array.length-1; i >=0; i--) {
-      System.out.print(array[i]+" ");
+      sum = sum + array[i];
     }
- 
+
+    System.out.print("\n The sum of array elements: "+sum);
   }
 }
