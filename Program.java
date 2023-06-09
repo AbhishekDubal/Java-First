@@ -1,7 +1,7 @@
 import java.util.Scanner;
 class Program{
   public static void main(String[] args) {
-    //Sort the array elements in Ascending order:
+    //Sort the array elements in Descending order:
 
     Scanner sc =new Scanner(System.in);
     System.out.println("Enter the size of array: ");
@@ -21,11 +21,11 @@ class Program{
       System.out.print(array[i]+" ");
     }
 
-    System.out.println("\nAfter Sorting the array elements in Ascending order: ");
+    System.out.println("\nAfter Sorting the array elements in Descending order: ");
 
     for (int i = 0; i < array.length; i++) {
       for (int j = i+1; j < array.length; j++) {
-        if(array[i] > array[j]){
+        if(array[i] < array[j]){
           int temp= array[i];
           array[i] = array[j];
           array[j] = temp;
