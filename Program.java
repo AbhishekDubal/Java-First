@@ -1,29 +1,41 @@
 import java.util.Scanner;
-class Program {
+class Program{
   public static void main(String[] args) {
-  
-    //print sum of array elements :
-    Scanner sc = new Scanner(System.in);
-    System.out.println("Enter the length of array: ");
+    //Search the element in the array:
+
+    Scanner sc =new Scanner(System.in);
+    System.out.println("Enter the size of array: ");
+
     int size = sc.nextInt();
 
-    int array [] =new int [size];
-  
+    int array[] = new int[size];
+
     System.out.println("Enter the elements: ");
-    for(int i= 0; i<array.length;i++){
-       array[i]=sc.nextInt();
+    for (int i = 0; i < array.length; i++) {
+      array[i] = sc.nextInt();
     }
 
-    System.out.println("The elements that you've entered in order: ");
-    for(int i= 0; i<array.length;i++){
+    System.out.print("The elements that you've entered: ");
+
+    for (int i = 0; i < array.length; i++) {
       System.out.print(array[i]+" ");
     }
 
-    int sum =0;
-    for (int i = array.length-1; i >=0; i--) {
-      sum = sum + array[i];
+    System.out.println("\nEnter the element that you want to search: ");
+    int search = sc.nextInt();
+
+    int count=0;
+    for (int i = 0; i < array.length; i++) {
+      if(search==array[i]){
+        count++;
+      }
     }
 
-    System.out.print("\n The sum of array elements: "+sum);
+    if (count>0) {
+      System.out.print("The "+search+ " element is found!");
+    }
+    else{
+      System.out.print("The "+search+ " element is NOT-found!");
+    }
   }
 }
