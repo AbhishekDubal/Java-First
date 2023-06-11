@@ -1,34 +1,51 @@
 import java.util.Scanner;
 class Program{
   public static void main(String[] args) {
-    //Find the biggest element is the array:
+    //Inserting another element in the array:
 
     Scanner sc = new Scanner(System.in);
     System.out.println("Enter the size of the Array: ");
     int size = sc.nextInt();
 
-    System.out.print("Enter the array elements in array: ");
-    int array[] = new int [size];
+    int array[] = new int [size+1];
 
-    for (int i = 0; i < array.length; i++) {
+    System.out.print("Enter the array elements in array: ");
+    for (int i = 0; i < size; i++) {
       array[i]  = sc.nextInt();
     }
 
-    System.out.print("The elements that you've eneterd now: ");
-    for (int i = 0; i < array.length; i++) {
+    System.out.println("The elements that you've eneterd now: ");
+    for (int i = 0; i < size; i++) {
       System.out.print(" "+array[i]);
     }
 
-    System.out.println();
+    System.out.println("\nNow... Where do you want to insert your value: ");
+    int location = sc.nextInt();
+    
+    System.out.println("What value you want to enter there!");
+    int value = sc.nextInt();
+/**
+ * //here it'll not give the last value. Because, suppose 4+1 =4, here if the 5th value is none in a sense the value would considered as 0(defalut integer value).
     for (int i = 0; i < array.length; i++) {
-      for (int j = i+1; j < array.length; j++) {
-        if(array[i] < array[j]){
-          int temp = array[i];
-          array[i] = array[j];
-          array[j] = temp;
-        }
+      if(location == i){
+        array[i+1] = array[i];
       }
     }
-    System.out.print("So the biggest element is: "+array[0]);
+
+    array[location] = value;
+    for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i]+" ");
+    }
+   */
+  //So, to vaid this problem we should start with array's length
+
+  for(int i = array.length-1; i > location; i--){
+    array[i] = array[i-1];
+  }
+  array[location] = value;
+
+  for (int i = 0; i < array.length; i++) {
+    System.out.print(array[i]+" ");
+  }
   }
 }
