@@ -12,13 +12,13 @@ class Program{
     System.out.println("Enter the range: ");
     int range = sc.nextInt();
 
-    System.out.print(num1 +" "+num2+" "+num3);
+    // System.out.print(num1 +" "+num2+" "+num3);
 
-    for(int i = 1; i<=range -4;i++){
+    for(int i = 1; i<=range;i++){
+      System.out.print(num1+" ");
       num4 = num1+num2+num3;
-      System.out.print(" "+num4);
-      num1 = num2;
-      num2 = num3;
+      num1=num2;
+      num2=num3;
       num3= num4;
     }
   }
