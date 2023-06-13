@@ -1,16 +1,16 @@
 class Program{
   public static void main(String[] args) {
-    //Left UP side corner tri-angle patterns using java.
+    //square with no stars in the box pattern using java.
 
-    for (int i = 1; i <=5; i++) {
-      
-      // for (int k = i; k > 1; k--) {
-      //   System.out.print(" ");
-      // }
-      for (int j = 5; j >=i; j--) {
-        System.out.print("*");
-      }
-      System.out.println();
+    for(int i=1; i<=5; i++){
+      for(int j=1; j<=5;j++){
+        if(i==1 || i==5 || j==1 || j==5){
+          System.out.print("*");
+        }
+        else{
+          System.out.print(" ");
+        }
+      }System.out.println();
     }
   }
 }
