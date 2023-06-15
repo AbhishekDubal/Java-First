@@ -1,25 +1,27 @@
 import java.util.Scanner;
+
 class Program{
   public static void main(String[] args) {
-    //Tribonacci
+    //Multi Dimenetional array
+    int array[][] = new int[4][4];
 
-    int num1=0;
-    int num2=1;
-    int num3 = 2;
-    int num4;
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter the array elements: ");
 
-    Scanner sc  = new Scanner(System.in);
-    System.out.println("Enter the range: ");
-    int range = sc.nextInt();
+    for (int i = 0; i < array.length; i++) {
+      for (int j = 0; j < array.length; j++) {
+        array[i][j] = sc.nextInt();
+      }
+      System.out.println();
+    }
 
-    // System.out.print(num1 +" "+num2+" "+num3);
+    System.out.println("The elements that you've entered are: ");
 
-    for(int i = 1; i<=range;i++){
-      System.out.print(num1+" ");
-      num4 = num1+num2+num3;
-      num1=num2;
-      num2=num3;
-      num3= num4;
+    for (int i = 0; i < array.length; i++) {
+      for (int j = 0; j < array.length; j++) {
+        System.out.print(array[i][j]+" ");
+      }
+      System.out.println();
     }
   }
 }
