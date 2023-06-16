@@ -1,23 +1,23 @@
 import java.util.Scanner;
 class Program{
   public static void main(String[] args) {
-    //Recursion
+    //Recursion (Factorial finding)
 
     Scanner sc = new Scanner(System.in);
     System.out.print("Enter the Number: ");
 
     int number =sc.nextInt();
     Program p = new Program();
-    int total = p.sumOfNumber(number);
-    System.out.println("The sum of "+number+" is: "+total);
+    int total = p.factOfNumber(number);
+    System.out.println("The factorial of "+number+" is: "+total);
   }
 
-  int sumOfNumber(int number){
+  int factOfNumber(int number){
     if(number>0){
-      return number+sumOfNumber(number-1);
+      return number*factOfNumber(number-1);
     }
     else{
-      return 0;
+      return 1;
     }
   }
 }
