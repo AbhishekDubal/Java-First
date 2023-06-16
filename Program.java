@@ -1,23 +1,13 @@
-import java.util.Scanner;
 class Program{
-  public static void main(String[] args) {
-    //Recursion (Factorial finding)
+  public static void main(String []ar){
+    //Reverse the String value:
 
-    Scanner sc = new Scanner(System.in);
-    System.out.print("Enter the Number: ");
+    String name = "Abhishek";
 
-    int number =sc.nextInt();
-    Program p = new Program();
-    int total = p.factOfNumber(number);
-    System.out.println("The factorial of "+number+" is: "+total);
-  }
+    int length = name.length();
 
-  int factOfNumber(int number){
-    if(number>0){
-      return number*factOfNumber(number-1);
-    }
-    else{
-      return 1;
+    for(int i = length-1; i>=0;i--){
+      System.out.print(name.charAt(i)); 
     }
   }
 }
