@@ -1,27 +1,23 @@
 import java.util.Scanner;
-
 class Program{
   public static void main(String[] args) {
-    //Multi Dimenetional array
-    int array[][] = new int[4][4];
+    //Recursion
 
     Scanner sc = new Scanner(System.in);
-    System.out.println("Enter the array elements: ");
+    System.out.print("Enter the Number: ");
 
-    for (int i = 0; i < array.length; i++) {
-      for (int j = 0; j < array.length; j++) {
-        array[i][j] = sc.nextInt();
-      }
-      System.out.println();
+    int number =sc.nextInt();
+    Program p = new Program();
+    int total = p.sumOfNumber(number);
+    System.out.println("The sum of "+number+" is: "+total);
+  }
+
+  int sumOfNumber(int number){
+    if(number>0){
+      return number+sumOfNumber(number-1);
     }
-
-    System.out.println("The elements that you've entered are: ");
-
-    for (int i = 0; i < array.length; i++) {
-      for (int j = 0; j < array.length; j++) {
-        System.out.print(array[i][j]+" ");
-      }
-      System.out.println();
+    else{
+      return 0;
     }
   }
 }
